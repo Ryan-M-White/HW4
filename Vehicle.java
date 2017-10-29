@@ -33,7 +33,7 @@ public abstract class Vehicle {
         setCost(cost);
 
         sc.close();
-		wholeLineSC.close();
+		  wholeLineSC.close();
     }
 
 //methods
@@ -47,7 +47,7 @@ public abstract class Vehicle {
             System.out.println("\t\t" + j + ". " + choices[i]);
             choiceIdentifiers = choiceIdentifiers + j.toString();
         }
-        System.out.print("Choice: ");				
+        System.out.print("Choice: ");
         while (!sc.hasNext("[" + choiceIdentifiers +"]")) {
             System.out.println("");
             System.out.println("");	
@@ -61,7 +61,7 @@ public abstract class Vehicle {
         }
         choice = Integer.parseInt(sc.next());
         sc.close();
-        return choice;
+        return choice - 1;
     }
 
 //getters

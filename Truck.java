@@ -21,8 +21,10 @@ public class Truck extends Vehicle {
 */
     public Truck(){
         super(vehicleType);
-        setTruckSize(truckSizeChoices[showMenu("What size Truck is this?", truckSizeChoices)]);
-        setEngineSize(engineSizeChoices[showMenu("What is the engine size of the Truck?", engineSizeChoices)]);
+        int selection = showMenu("What size Truck is this?", truckSizeChoices);
+        setTruckSize(truckSizeChoices[selection]);
+        selection = showMenu("What is the engine size of the Truck?", engineSizeChoices);
+        setEngineSize(engineSizeChoices[selection]);
     }
 
 //methods
